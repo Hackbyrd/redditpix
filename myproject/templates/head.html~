@@ -1,0 +1,15 @@
+<!-- Head -->
+<head>
+	<meta http-equiv = "Content-Type" content = "text/html; charset = UTF-8"/>
+	<link rel = "stylesheet" type = "text/css" href = "{{STATIC_URL}}css/style.css" />
+	
+	<!-- Lightbox stuff -->
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/lightbox.css" media="screen" />
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/lightbox.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/display-orig.js"></script>
+	<script type="text/javascript" src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+	<link rel = "shortcut icon" type = "image/x-icon" href = "{{STATIC_URL}}images/favicon.ico">
+
+	<title> RedditPix </title>
+</head>

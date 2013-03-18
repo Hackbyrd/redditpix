@@ -1,0 +1,115 @@
+'''
+This file contains the code that returns a response when we receive a web request
+'''
+
+from django.template import RequestContext, Context, loader
+from django.http import HttpResponse
+from models import Post, Comment
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core import serializers
+from django.utils import simplejson
+
+'''
+When the home page is requested
+'''
+# FACEBOOK
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+def index(request):
+    context = {}
+    return render_to_response('index.html',
+        context,
+        context_instance=RequestContext(request))
+# FACEBOOK
+
+# home with all pictures
+def home(request):
+    template = loader.get_template('base.html')
+    page_template = loader.get_template('base_page.html')
+    postCol1 = Post.objects.filter(is_img=True)
+    paginator = Paginator(postCol1, 15)
+
+    if request.is_ajax():
+        if request.GET.get('page'):
+            page = request.GET.get("page")
+            try:
+                col1 = paginator.page(page).object_list
+            except InvalidPage:
+                return HttpResponseBadRequest(mimetype="application/json")
+            resp = serializers.serialize('json', col1)
+            return HttpResponse(resp, mimetype='application/json')
+    else:
+        col1 = paginator.page(1).object_list
+    dict = {"pagetitle": "Home",
+            "page_template": 'base_page.html',
+            "col1": col1,
+            }
+    c = RequestContext(request, dict)
+    return HttpResponse(template.render(c))
+
+# with num of pictures and category specified
+def specific(request, numPix, category):
+    template = loader.get_template('base.html')
+    page_template = loader.get_template('base_page.html')
+    postCol = Post.objects.filter(is_img=True)
+    postCol1 = postCol.filter(subreddit=category)
+    paginator = Paginator(postCol1, int(numPix))
+
+    if request.is_ajax():
+        if request.GET.get('page'):
+            page = request.GET.get("page")
+            try:
+                col1 = paginator.page(page).object_list
+            except InvalidPage:
+                return HttpResponseBadRequest(mimetype="application/json")
+            resp = serializers.serialize('json', col1)
+            return HttpResponse(resp, mimetype='application/json')
+    else:
+        col1 = paginator.page(1).object_list
+    dict = {"pagetitle": "Home",
+            "page_template": 'base_page.html',
+            "col1": col1,
+            }
+    c = RequestContext(request, dict)
+    return HttpResponse(template.render(c))
+
+# With a certain number of pictures specified
+def numSpecific(request, numPix):
+    template = loader.get_template('base.html')
+    page_template = loader.get_template('base_page.html')
+    postCol1 = Post.objects.filter(is_img=True)
+    paginator = Paginator(postCol1, int(numPix))
+
+    if request.is_ajax():
+        if request.GET.get('page'):
+            page = request.GET.get("page")
+            try:
+                col1 = paginator.page(page).object_list
+            except InvalidPage:
+                return HttpResponseBadRequest(mimetype="application/json")
+            resp = serializers.serialize('json', col1)
+            return HttpResponse(resp, mimetype='application/json')
+    else:
+        col1 = paginator.page(1).object_list
+    dict = {"pagetitle": "Home",
+            "page_template": 'base_page.html',
+            "col1": col1,
+            }
+    c = RequestContext(request, dict)
+    return HttpResponse(template.render(c))
+
+
+'''
+When the about page is requested
+'''
+def about(request):
+    t = loader.get_template('about.html')
+    c = RequestContext(request, None)
+    return HttpResponse(t.render(c))
+
+def image(request, img_name):
+    try:
+        p = Post.objects.get(name=img_name)
+    except Poll.DoesNotExist:
+        raise Http404
+    return render_to_response('image.html', {'post': p})

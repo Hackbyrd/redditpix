@@ -1,0 +1,42 @@
+<div class = "infoColumn">
+
+                <a rel="lightbox[pics]" title="{{p.title}}" href="{{p.link}}">
+                  <img src="{{p.link}}" width="100%" />
+                </a>
+
+                <hr/>
+                <h6 style = "margin: 15px 0px; padding: 0px;">{{p.title}}
+                  </br></br><a href="/{{p.name}}" target="_blank">View Full-Size Image</a>
+                </h6>
+                <hr/>
+                <!--<a href="/{{p.name}}">Link</a>-->
+                <center style = 'font-size: 10px;'><u>UpVotes: {{p.upVotes}}</u> | <u>DownVotes: {{p.downVotes}}</u></center>
+                <div class = "columnSocial">
+
+                        <div class = "innerColumnSocial">
+                                <!-- Facebook Send {{p.link}} "fb-send"-->
+                                <div class="fb-send" style = "margin: 0px auto 0px auto;" data-href="http://www.redditpix.com/{{p.name}}" data-font="arial"></div>
+                        </div>
+
+                        <div class = "innerColumnSocial">
+                                <!-- Twitter Tweet -->
+                                <center>
+                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.redditpix.com/{{p.name}}" data-via="@RedditPix" data-lang="en">Tweet</a>
+                                </center>
+                                <script>
+                                !function(d,s,id) {
+                                        var js,fjs=d.getElementsByTagName(s)[0];
+                                        if(!d.getElementById(id)){
+                                                js=d.createElement(s);
+                                                js.id=id;
+                                                js.src="https://platform.twitter.com/widgets.js";
+                                                fjs.parentNode.insertBefore(js,fjs);
+                                        }
+                                }
+                                (document,"script","twitter-wjs");
+                                </script>
+                        </div>
+
+                </div>
+
+        </div>

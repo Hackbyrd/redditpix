@@ -1,0 +1,486 @@
+<!-- RedditPix  -->
+<!DOCTYPE html>
+<html lang = "en">
+
+	{% include "head.html" %}
+
+	<script type="text/javascript"> 
+	
+		var flip1 = true;
+		var flip2 = true;
+		var flip3 = true;
+		var flip4 = true;
+		var flipAll = true;
+	
+		$(document).ready(function(){
+			$(".panel").show();
+			$(".panel2").show();
+			$(".panel3").show();
+			$(".panel4").show();
+			
+			$(".flip").click(function(){
+    			$(".panel").slideToggle("slow");
+    			
+    			if (flip1 == true) {
+    				$(".flip").text("Show: What Is RedditPix?");
+    				
+    				if ((flip2 == false) && (flip3 == false) && (flip4 == false) && (flipAll == true)) {
+    					$(".midBoxSpace").text("Show All");
+    					flipAll = !flipAll;
+    					$(".topBoxSpace").slideToggle("slow");
+    				}
+    				
+    			}
+    				
+    			else {
+    				$(".flip").text("Hide: What Is RedditPix?");
+    				
+    				if ((flip2 == true) && (flip3 == true) && (flip4 == true) && (flipAll == false)) {
+    					$(".midBoxSpace").text("Hide All");
+    					flipAll = !flipAll;
+    					$(".topBoxSpace").slideToggle("slow");
+    				}
+    				
+    			}
+    				
+    			flip1 = !flip1;
+  			});
+		});
+		
+		$(document).ready(function(){
+			$(".flip2").click(function(){
+    			$(".panel2").slideToggle("slow");
+    			
+    			if (flip2 == true) {
+    				$(".flip2").text("Show: Why RedditPix?");
+    			
+    				if ((flip1 == false) && (flip3 == false) && (flip4 == false) && (flipAll == true)) {
+    					$(".midBoxSpace").text("Show All");
+    					flipAll = !flipAll;
+    					$(".topBoxSpace").slideToggle("slow");
+    				}
+    				
+    			}
+    			else {
+    				$(".flip2").text("Hide: Why RedditPix?");
+    			
+    				if ((flip1 == true) && (flip3 == true) && (flip4 == true) && (flipAll == false)) {
+    					$(".midBoxSpace").text("Hide All");
+    					flipAll = !flipAll;
+    					$(".topBoxSpace").slideToggle("slow");
+    				}
+    				
+    			}
+    				
+    			flip2 = !flip2;
+    			
+  			});
+		});
+		
+		$(document).ready(function(){
+			$(".flip3").click(function(){
+    			$(".panel3").slideToggle("slow");
+    			
+    			if (flip3 == true) {
+    				$(".flip3").text("Show: Who Created RedditPix?");
+    			
+    				if ((flip1 == false) && (flip2 == false) && (flip4 == false) && (flipAll == true)) {
+    					$(".midBoxSpace").text("Show All");
+    					flipAll = !flipAll;
+    					$(".topBoxSpace").slideToggle("slow");
+    				}
+    				
+    			}
+    				
+    			else {
+    				$(".flip3").text("Hide: Who Created RedditPix?");
+    			
+    				if ((flip1 == true) && (flip2 == true) && (flip4 == true) && (flipAll == false)) {
+    					$(".midBoxSpace").text("Hide All");
+    					flipAll = !flipAll;
+    					$(".topBoxSpace").slideToggle("slow");
+    				}
+    				
+    			}
+    				
+    			flip3 = !flip3;
+    			
+  			});
+		});
+		
+		$(document).ready(function(){
+			$(".flip4").click(function(){
+    			$(".panel4").slideToggle("slow");
+    			
+    			if (flip4 == true) {
+    				$(".flip4").text("Show: Comments On RedditPix");
+    			
+    				if ((flip1 == false) && (flip2 == false) && (flip3 == false) && (flipAll == true)) {
+    					$(".midBoxSpace").text("Show All");
+    					flipAll = !flipAll;
+    					$(".topBoxSpace").slideToggle("slow");
+    				}
+    				
+    			}
+    				
+    			else {
+    				$(".flip4").text("Hide: Comments RedditPix");
+    				
+    				if ((flip1 == true) && (flip2 == true) && (flip3 == true) && (flipAll == false)) {
+    					$(".midBoxSpace").text("Hide All");
+    					flipAll = !flipAll;
+    					$(".topBoxSpace").slideToggle("slow");
+    				}
+    					
+    			}
+    				
+    			flip4 = !flip4;
+    			
+  			});
+		});
+		
+		$(document).ready(function(){
+			$(".midBoxSpace").click(function(){
+    			
+    			if (flipAll == true) {
+    			
+    				$(".midBoxSpace").text("Show All");
+    				
+    				if (flip1 == true) {
+    					$(".flip").text("Show: What Is RedditPix?");
+    					$(".panel").slideToggle("slow");
+    					flip1 = !flip1;
+    				}
+    				
+    				if (flip2 == true) {
+    					$(".flip2").text("Show: Why RedditPix?");
+    					$(".panel2").slideToggle("slow");
+    					flip2 = !flip2;
+    				}
+    				
+    				if (flip3 == true) {
+    					$(".flip3").text("Show: Who Created RedditPix?");
+    					$(".panel3").slideToggle("slow");
+    					flip3 = !flip3;
+    				}
+    				
+    				if (flip4 == true) {
+    					$(".flip4").text("Show: Comments On RedditPix");
+    					$(".panel4").slideToggle("slow");
+    					flip4 = !flip4;
+    				}  				
+    				
+    			}
+    			
+    			else {
+    				$(".midBoxSpace").text("Hide All");
+    				
+    				if (flip1 == false) {
+    					$(".flip").text("Hide: What Is RedditPix?");
+    					$(".panel").slideToggle("slow");
+    					flip1 = !flip1;
+    				}
+    				
+    				if (flip2 == false) {
+    					$(".flip2").text("Hide: Why RedditPix?");
+    					$(".panel2").slideToggle("slow");
+    					flip2 = !flip2;
+    				}
+    				
+    				if (flip3 == false) {
+    					$(".flip3").text("Hide: Who Created RedditPix?");
+    					$(".panel3").slideToggle("slow");
+    					flip3 = !flip3;
+    				}
+    				
+    				if (flip4 == false) {
+    					$(".flip4").text("Hide: Comments On RedditPix");
+    					$(".panel4").slideToggle("slow");
+    					flip4 = !flip4;
+    				}  				
+    				
+    			}
+    				
+    			flipAll = !flipAll;
+    			$(".topBoxSpace").slideToggle("slow");
+    			
+  			});
+		});
+		
+	</script>
+
+	<style type="text/css">
+	
+		.aboutLeftBox {
+			background-color: ;
+			width: 47%;
+			height: 300px;
+			float: left;
+		}
+		.aboutMidBox {
+			background-color: ;
+			width: 6%;
+			height: 300px;
+			float: left;
+		}
+		.aboutRightBox {
+			background-color: ;
+			width: 47%;
+			height: 300px;
+			float: left;
+		}
+		
+		div.panel,p.flip {
+			margin:0px;
+			padding:5px;
+			text-align: center;
+			background-image: url("{{STATIC_URL}}images/banner.png");
+			border: solid #BDBDBD 1px;
+			width: 400px;
+			float: right;
+			-webkit-box-shadow: 0 7px 9px -9px black;
+			-moz-box-shadow: 0 7px 9px -9px black;
+			box-shadow: 0 7px 9px -9px black;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		div.panel {
+			height:200px;
+			background-image: url("{{STATIC_URL}}images/infoBackground.png");
+			display:none;
+			text-align: left;
+			width: 400px;
+			float: right;
+			border: solid #BDBDBD 1px;
+			-webkit-box-shadow: 0 7px 9px -9px black;
+			-moz-box-shadow: 0 7px 9px -9px black;
+			box-shadow: 0 7px 9px -9px black;
+			padding-bottom: 20px;
+		}
+		
+		div.panel2,p.flip2 {
+			margin:0px;
+			padding:5px;
+			text-align: center;
+			background-image: url("{{STATIC_URL}}images/banner.png");
+			border: solid #BDBDBD 1px;
+			width: 400px;
+			float: right;
+			-webkit-box-shadow: 0 7px 9px -9px black;
+			-moz-box-shadow: 0 7px 9px -9px black;
+			box-shadow: 0 7px 9px -9px black;
+			float: left;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		div.panel2 {
+			text-align: left;
+			height:200px;
+			background-image: url("{{STATIC_URL}}images/infoBackground.png");
+			display:none;
+			width: 400px;
+			float: right;
+			border: solid #BDBDBD 1px;
+			-webkit-box-shadow: 0 7px 9px -9px black;
+			-moz-box-shadow: 0 7px 9px -9px black;
+			box-shadow: 0 7px 9px -9px black;
+			float: left;
+			padding-bottom: 20px;
+		}
+		div.panel3,p.flip3 {
+			margin:0px;
+			padding:5px;
+			text-align: center;
+			background-image: url("{{STATIC_URL}}images/banner.png");
+			border: solid #BDBDBD 1px;
+			width: 400px;
+			float: right;
+			-webkit-box-shadow: 0 7px 9px -9px black;
+			-moz-box-shadow: 0 7px 9px -9px black;
+			box-shadow: 0 7px 9px -9px black;
+			float: right;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		div.panel3 {
+			text-align: left;
+			height:200px;
+			background-image: url("{{STATIC_URL}}images/infoBackground.png");
+			display:none;
+			width: 400px;
+			float: right;
+			border: solid #BDBDBD 1px;
+			-webkit-box-shadow: 0 7px 9px -9px black;
+			-moz-box-shadow: 0 7px 9px -9px black;
+			box-shadow: 0 7px 9px -9px black;
+			float: right;
+			padding-bottom: 20px;
+		}
+		div.panel4,p.flip4 {
+			margin:0px;
+			padding:5px;
+			text-align: center;
+			background-image: url("{{STATIC_URL}}images/banner.png");
+			border: solid #BDBDBD 1px;
+			width: 400px;
+			float: right;
+			-webkit-box-shadow: 0 7px 9px -9px black;
+			-moz-box-shadow: 0 7px 9px -9px black;
+			box-shadow: 0 7px 9px -9px black;
+			float: left;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		div.panel4 {
+			text-align: left;
+			height:200px;
+			background-image: url("{{STATIC_URL}}images/infoBackground.png");
+			display:none;
+			width: 400px;
+			float: right;
+			border: solid #BDBDBD 1px;
+			-webkit-box-shadow: 0 7px 9px -9px black;
+			-moz-box-shadow: 0 7px 9px -9px black;
+			box-shadow: 0 7px 9px -9px black;
+			float: left;
+			padding-bottom: 20px;
+		}
+		
+		div.topBoxSpace {
+			height: 263px;
+			background-color: ;
+		}
+		div.midBoxSpace {
+			height: 25px;
+			background-image: url("{{STATIC_URL}}images/banner.png");
+			color: white;
+			-moz-border-radius: 1px 1px 1px 1px / 1px 1px 1px 1px;
+			border-radius: 1px 1px 1px 1px / 1px 1px 1px 1px;
+			text-align: center;
+			padding-top: 5px;
+			-webkit-box-shadow: 0 7px 9px -9px black;
+			-moz-box-shadow: 0 7px 9px -9px black;
+			box-shadow: 0 7px 9px -9px black;
+		}
+		div.bottomBoxSpace {
+			height: 12px;
+			background-color: ;
+		}
+		
+	</style>
+
+	<!--Start Body-->
+	<body onload="setupBlocks();">
+
+	{% include "facebookJDK.html" %}
+
+		<div class = "container">	
+			<!--Top Banner Strip-->
+			<header>
+				<div class = "topStrip">
+                
+					<!-- Left Side About and Reddit -->
+					<div class = "leftTopStrip">
+						<a href = "http://www.redditpix.com/"><div class = "leftBox">Home</div></a>
+						<a href = "http://www.reddit.com/"><div class = "leftBox">Reddit</div></a>
+					</div>
+                
+                	{% include "topBanner.html" %}
+                
+				</div>
+			</header>
+			<!--End Top Banner Strip-->
+			
+			<!--Information Body-->
+			<div id = "centerBody" style = "background-color:; min-height: 650px; padding: 30px 0px 0px 0px;">
+				
+				</br>
+				
+				<!-- What Is Box -->
+				<div class = "aboutLeftBox">
+					<div class="panel">
+						<p>
+						<center><u>About RedditPix</u></center></br>
+						Content provided by Reddit and Imgur. Design inspired by Pinterest.</br></br>
+						RedditPix allows visitors to view Reddit posts of Imgur images and GIFs through a simple, clean
+						and less cluttered user interface. Users can easily share their favorite images and GIFs via Facebook
+						or Twitter. No logging in required.
+						</p>
+					</div>
+ 
+					<p class="flip" style = "color: white;">Hide: What Is RedditPix?</p>
+				</div>
+				<!-- End What Is Box -->
+				
+				<div class = "aboutMidBox" style = "background-color: ">
+					<div class = "topBoxSpace">
+					</div>
+					<div class = "midBoxSpace">
+						Hide All
+					</div>
+					<div class = "bottomBoxSpace">
+					</div>
+				</div>
+				
+				<!-- Purpose Box -->
+				<div class = "aboutRightBox">
+					<div class="panel2">
+						<p>
+						<center><u>Why was RedditPix Created?</u></center></br>
+						I created RedditPix as an optional internship project because I wanted to practice web development 
+						using Python, Django, MySQL, HTML, CSS, JavaScript, JQuery and Ajax all together. At my internship I learned python so I wanted to put my
+						new acquired skills to the test. I wanted to create something people might find interesting. Thus, RedditPix was born. 
+						</p>
+					</div>
+ 
+					<p class="flip2" style = "color: white;">Hide: Why RedditPix?</p>
+				</div>
+				<!-- End Purpose Box -->
+				
+				<!--Who Box -->
+				<div class = "aboutLeftBox">
+					<div class="panel3">
+						<p>
+						<center><u>RedditPix Creator</u></center></br>
+						My name is Jonathan Chen and I am studying computer science at the University of Maryland, College Park. I created
+						RedditPix for fun! Also, to present it as my second internship project for the Taiwan Tech Trek program.
+						</p>
+					</div>
+ 
+					<p class="flip3" style = "color: white;">Hide: Who Created RedditPix?</p>
+				</div>
+				<!-- End who Is Box -->
+				
+				<div class = "aboutMidBox"></div>
+				
+				<!-- Comment Box -->
+				<div class = "aboutRightBox">
+					<div class="panel4">
+						<p>
+						<center><u>My Comments</u></center></br>
+						I created this website as an internship project. All of RedditPix's content is from Reddit and Imgur. I do not own the
+						content. I have no intention of generating a profit from this website. This website's sole purpose is to make it easier to
+						view Reddit images. This website is not affiliated with Reddit or Imgur. If there are any issues I will shut this site down or change
+						the name 'RedditPix'. Sorry ahead of time for any inconveniences. 
+						</p>
+					</div>
+ 
+					<p class="flip4" style = "color: white;">Hide: Comment On RedditPix</p>
+				</div>
+				<!-- Comment Purpose Box -->
+				
+			</div>
+			<!--End Information Body-->
+			
+			<!--clears footer-->
+			<div class = "clearfooter"></div>
+			
+		</div>
+		
+		{% include "footer.html"%}
+		
+	</body>
+
+</html>
+	
+

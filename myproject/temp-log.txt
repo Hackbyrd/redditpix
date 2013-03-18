@@ -1,0 +1,29 @@
+Wed Aug 22 23:00:01 UTC 2012
+Scraping url: http://www.reddit.com/.json
+
+    writing 25 submissions to database...
+Scraping url: http://www.reddit.com/.json?after=t3_yn3yg
+
+    writing 25 submissions to database...
+Scraping url: http://www.reddit.com/.json?after=t3_yn1w9
+
+    writing 25 submissions to database...
+Scraping url: http://www.reddit.com/.json?after=t3_ymvcx
+
+    writing 25 submissions to database...
+Scraping url: http://www.reddit.com/.json?after=t3_ymxpb
+
+    writing 25 submissions to database...
+Scraping url: http://www.reddit.com/.json?after=t3_yn42y
+
+    writing 25 submissions to database...
+Scraping url: http://www.reddit.com/.json?after=t3_ymufn
+
+    writing 25 submissions to database...
+Scraping url: http://www.reddit.com/.json?after=t3_yn3ku
+
+    writing 25 submissions to database...
+Scraping url: http://www.reddit.com/.json?after=t3_ymsqk
+
+    writing 25 submissions to database...
+Wed Aug 22 23:00:35 UTC 2012

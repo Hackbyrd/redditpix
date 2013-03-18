@@ -1,0 +1,3 @@
+#!/bin/bash
+
+LD_LIBRARY_PATH=/home/hackbyrd/webapps/redditpix/apache2/lib /home/hackbyrd/webapps/redditpix/apache2/bin/httpd.worker -f /home/hackbyrd/webapps/redditpix/apache2/conf/httpd.conf -k start

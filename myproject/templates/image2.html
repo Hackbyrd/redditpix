@@ -1,0 +1,42 @@
+<!-- RedditPix Image Template  -->
+<!DOCTYPE html>
+<html lang = "en">
+
+	{% include "head.html" %}
+
+	<!--Start Body-->
+	<body>
+
+	{% include "facebookJDK.html" %}
+
+		<div class = "container">	
+			<!--Top Banner Strip-->
+			<header>
+				<div class = "topStrip">
+                
+					<!-- Left Side About and Reddit -->
+					<div class = "leftTopStrip">
+						<a href = "http://www.redditpix.com"><div class = "leftBox">Home</div></a>
+						<a href = "http://www.reddit.com/"><div class = "leftBox">Reddit</div></a>
+					</div>
+                
+                	{% include "topBanner.html" %}
+                
+				</div>
+			</header>
+			<!--End Top Banner Strip-->
+			
+			<!--Information Body-->
+			<center><img src = "{{post.link}}"></center>
+			<!--End Information Body-->
+			
+			<!--clears footer-->
+			<div class = "clearfooter"></div>
+			
+		</div>
+		
+		{% include "footer.html"%}
+		
+	</body>
+
+</html>

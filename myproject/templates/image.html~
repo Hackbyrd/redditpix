@@ -1,0 +1,42 @@
+<!-- RedditPix Image Template  -->
+<!DOCTYPE html>
+<html lang = "en">
+
+  <head>
+    <link rel = "shortcut icon" type = "image/x-icon" href = "{{STATIC_URL}}images/favicon.ico">
+  </head>
+
+  <style>
+    
+    body {
+      margin: 0px;
+      line-height: 80%;
+    }
+
+    a {
+      text-decoration: underline;
+      color: blue;
+    }
+
+    a:visited {
+      color:purple;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+    
+  </style>
+
+	<!--Start Body-->
+	<body>
+			
+			<!--Information Body-->
+			<img src = "{{post.link}}">
+			</br></br>{{post.title}}
+			</br></br><a href = "http://www.redditpix.com">Visit RedditPix.com</a>
+			<!--End Information Body-->
+		
+	</body>
+
+</html>

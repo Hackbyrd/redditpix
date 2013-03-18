@@ -1,0 +1,272 @@
+/* This is a CSS file of RedditPix */
+
+/* Body */
+html, body {
+   /*background-image: url("../images/background2.png");*/
+   background-image: url(" http://www.mastering.me/mastering/mastering.me_files/background_gradient_basic_background_gradient_gray_11_%5B5000x4000%5D.jpg");
+   background-attachment: fixed;
+   color: #000000;
+   font-family: Arial, Helvetica, sans-serif;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+   vertical-align: middle;
+   height: 100%;
+}
+
+div.container {
+	min-height: 100%;
+	margin-top: -20px;
+}
+
+div.footer {
+    position: relative;
+    width: 100%;
+	background-image: url("../images/banner.png"); /***Change****/
+	height: 40px;
+	margin-top: -40px;
+	clear: both;
+	text-align: center;
+	color: white;
+	font-family: 'Zag';
+	border-top: 1px solid black;
+	line-height: 85%;
+}
+
+.footer a {
+	color: white;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	text-decoration: underline;
+}
+
+div.clearfooter {
+	height: 50px;
+	clear: both;
+}
+
+hr {
+	position: relative;
+	width: 100%
+	color: black;
+}
+
+header {
+    z-index:1000;
+    top: 0px;
+    width: 100%;
+    position: fixed;
+	background-image: url("../images/banner.png"); /***Change****/
+	height: 40px;
+    overflow: hidden;
+    margin: 0px;
+    border-bottom: 1px solid black;
+}
+
+div.topStrip {
+	position: relative;
+	padding: 0px 0px 10px 0px;
+	margin: 0px;
+	width: 1000px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	background-color: ;
+}
+
+div.leftTopStrip {
+    position: relative;
+	width: 33%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	font-size: 20px;
+	text-align: left;
+	background-color: ;
+}
+
+div.leftBox {
+	text-align:center;
+	margin: 5px 0px 5px 10px;
+	padding: 5px;
+	/*background-image: url("http://wendywerks.net/uploads/Gray_Gradient.jpg");
+	background-attachment: fixed;
+	background-color: white;
+	background-image: url("../images/infoBackground.png");
+	border-style: outset;*/
+	background-image: url("../images/banner.png");
+	border-top: 1px solid #E6E6E6;
+	border-right: 1px solid #E6E6E6;
+	border-left: 1px solid #E6E6E6;
+	color: white;
+	width: 25%;
+	height: 30px;
+	float: left;
+	-moz-border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
+	font-family: 'Zag';
+}
+
+div.middleTopStrip {
+	position: relative;
+	width: 33%;
+    float: left;
+    background: ;
+    height: 100%;
+}
+
+div.rightTopStrip {
+	position: relative;
+	width: 33%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	background-color: ;
+	padding-top: 10px;
+}
+
+div.leftTopStrip a {
+	text-decoration: none;
+	color: white;
+}
+
+div.leftTopStrip a:hover .leftBox{
+	text-decoration: ;
+	background-image: url("../images/infoBackground.png");
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	color: black;
+}
+
+div.clear {
+	clear: both;
+}
+
+/* Social Networks */
+
+div.socialBox {
+	float: left;
+	background-color: ;
+	min-height: 22px;
+	min-width: 35px;
+}
+
+img.fbPix {
+	height: 20px;
+	width: 22px;
+	-moz-border-radius: 3px 3px 3px 3px / 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px / 3px 3px 3px 3px;
+	outline: none;
+	-moz-outline-style: none;
+}
+
+/* End Social Networks */
+
+/* All information goes in here*/
+
+div#centerBody {
+    top: 35px;
+    position:relative;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 50px; /*footer height*/
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	overflow: hidden;
+	/*width: 1008px;*/
+	/*min-height: 100px;
+	height: auto !important;
+	height: 100%;*/
+	margin-left: auto;
+	margin-right: auto;
+    overflow: auto;
+    text-align: center;
+    background-color: ;
+}
+
+.infoColumn {
+	position: absolute;
+	padding: 5px;
+	margin: 10px 0px 10px 0px;
+	background-image: url("../images/infoBackground.png"); /***Change****/
+	width: 212px;
+	min-height: 100px;
+	text-align: center;
+	border: outset #BDBDBD 1px;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+	-webkit-box-shadow: 0 5px 6px -6px black;
+	-moz-box-shadow: 0 5px 6px -6px black;
+	box-shadow: 0 5px 6px -6px black;
+}
+
+.infoColumn2 {
+        position: absolute;
+        padding: 5px;
+        margin: 10px 0px 10px 0px;
+        background-image: url("../images/infoBackground.png"); /***Change****/
+        width: 212px;
+        min-height: 100px;
+        text-align: center;
+        border: outset #BDBDBD 1px;
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+        -webkit-box-shadow: 0 5px 6px -6px black;
+        -moz-box-shadow: 0 5px 6px -6px black;
+        box-shadow: 0 5px 6px -6px black;
+}
+
+.infoColumn a:hover img {
+	-moz-box-shadow: 0 0 2px 2px black;
+	-webkit-box-shadow: 0 0 2px 2px black;
+	box-shadow: 0 0 1px 1px black;
+}
+
+div.columnSocial {
+	width: 100%;
+	background-color: ;
+	margin-top: 10px;
+}
+
+div.innerColumnSocial {
+	width: 50%;
+	background-color: ;
+	float: left;
+}
+
+/*About Container*/
+div#aboutContainer {
+	position: relative;
+	padding: 0px 20px 10px 20px;
+	margin: 10px auto 0px auto;
+	width: 70%;
+	min-height: 100px;
+	text-align: center;
+	-moz-border-radius: 1px 1px 1px 1px / 1px 1px 1px 1px;
+	border-radius: 1px 1px 1px 1px / 1px 1px 1px 1px;
+    overflow: auto;
+    background-image: url("../images/infoBackground.png"); /***Change***/
+}
+
+div#aboutContainer p {
+	text-align: left;
+}
+
+a:hover {
+    text-decoration: none;
+}

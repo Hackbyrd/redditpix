@@ -1,0 +1,37 @@
+'''
+This file contains the code that returns a response when we receive a web request
+'''
+
+from django.template import RequestContext, Context, loader
+from django.http import HttpResponse
+from posts.models import Post, Comment
+
+'''
+When the home page is requested
+'''
+def home(request):
+    template = loader.get_template('base.html')
+    page_template = loader.get_template('base_page.html')
+    postCol1 = Post.objects.filter(is_img=True)[::4]
+    postCol2 = Post.objects.filter(is_img=True)[1::4]
+    postCol3 = Post.objects.filter(is_img=True)[2::4]
+    postCol4 = Post.objects.filter(is_img=True)[3::4]
+    dict = {"pagetitle": "Home",
+            "page_template": 'base_page.html',
+            "col1": postCol1,
+            "col2": postCol2,
+            "col3": postCol3,
+            "col4": postCol4,
+            }
+    if request.is_ajax():
+        template = page_template
+    c = RequestContext(request, dict)
+    return HttpResponse(template.render(c))
+
+'''
+When the about page is requested
+'''
+def about(request):
+    t = loader.get_template('About.html')
+    c = RequestContext(request, None)
+    return HttpResponse(t.render(c))

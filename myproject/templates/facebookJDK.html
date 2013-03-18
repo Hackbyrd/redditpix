@@ -1,0 +1,52 @@
+<!-- FACEBOOK JAVA SDK -->
+<div id="fb-root"></div>
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+				appId      : '495360990480155', // App ID
+				channelUrl : 'https://www.redditpix.com', // Channel File
+				status     : true, // check login status
+				cookie     : true, // enable cookies to allow the server to access the session
+				xfbml      : true  // parse XFBML
+				});
+		
+		// Additional initialization code here
+	};
+	
+	// Load the SDK Asynchronously
+	(function(d){
+	 var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+	 if (d.getElementById(id)) {return;}
+	 js = d.createElement('script'); js.id = id; js.async = true;
+	 js.src = "//connect.facebook.net/en_US/all.js";
+	 ref.parentNode.insertBefore(js, ref);
+	 }(document));
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+		 var js, fjs = d.getElementsByTagName(s)[0];
+		 if (d.getElementById(id)) return;
+		 js = d.createElement(s); js.id = id;
+		 js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=495360990480155";
+		 fjs.parentNode.insertBefore(js, fjs);
+		 }(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- End FACEBOOK -->
+
+<!-- For Columns -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(window).scroll(function(){
+			var cols = $(".column");
+			min = cols[0].offsetHeight;
+			for (i = 1; i < 4; i++) {
+				min = (cols[i].offsetHeight < min) ? cols[i].offsetHeight : min;
+			}
+			if ((window.innerHeight + window.scrollY) >= min - 800) {
+				loadPosts();
+			}
+		}); 
+	});
+  function loadPosts() {}
+</script>

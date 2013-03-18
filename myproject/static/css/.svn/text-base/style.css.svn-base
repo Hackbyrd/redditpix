@@ -1,0 +1,194 @@
+/* This is a CSS file of PINNIT */
+
+/* Body */
+/*
+html, body {
+   background-image: url("../images/background2.png"); 
+   background-attachment: fixed;
+   color: #000000;
+   font-family: 'Arial';
+   padding: 0;
+   margin: 0;
+   text-align: center;
+   vertical-align: middle;
+   height: 100%;
+}
+*/
+
+
+div#container {
+	min-height: 100%;
+	margin-top: -20px;
+}
+
+div#footer {
+    position: relative;
+    width: 100%;
+	background-image: url("../images/banner.png"); /***Change****/
+	height: 50px;
+	margin-top: -50px;
+	clear: both;
+	text-align: center;
+	color: white;
+}
+
+div.clearfooter {
+	height: 50px;
+	clear: both;
+}
+
+hr {
+	position: relative;
+	width: 100%
+	color: black;
+}
+
+header {
+    z-index:1000;
+    top: 0px;
+    width: 100%;
+    position: fixed;
+	background-image: url("../images/banner.png"); /***Change****/
+	height: 50px;
+    overflow: hidden;
+    margin: 0px;
+}
+
+div#topStrip {
+	position: relative;
+	padding: 10px 0px 10px 0px;
+	margin: 0px;
+	width: 1000px;
+	min-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	background-color: ;
+}
+
+div#leftTopStrip {
+	position: relative;
+	width: 400px;
+	min-height: 100%;
+	float: left;
+	text-align: center;
+	background-color: ;
+}
+
+div#google {
+	position: relative;
+	min-width: 300px;
+	min-height: 100%;
+	float: right;
+	text-align: right;
+}
+
+div#rightTopStrip {
+	position: relative;
+	width: 300px;
+	min-height: 100%;
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	font-size: 20px;
+	text-align: left;
+	background-color: ;
+}
+
+div#rightTopStrip a {
+	text-decoration: none;
+	color: white;
+}
+
+div#rightTopStrip a:hover{
+	text-decoration: underline;
+}
+
+div.clear {
+	clear: both;
+}
+
+/* All information goes in here*/
+
+div#centerBody {
+    top: 50px;
+    position:relative;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 50px; /*footer height*/
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	overflow: hidden;
+	/*width: 1008px;*/
+	/*min-height: 100px;
+	height: auto !important;
+	height: 100%;*/
+	margin-left: auto;
+	margin-right: auto;
+    overflow: auto;
+    text-align: center;
+    background-color: ;
+}
+
+/*ColumnContainer*/
+/*
+div#columnContainer {
+	position: relative;
+	padding: 10px;
+	margin: 0px 10px 0px 10px;
+	/*width: 968px;
+	min-height: 100%;*/ 
+	text-align: left;
+	-moz-border-radius: 3px 3px 3px 3px / 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px / 3px 3px 3px 3px;
+    /*overflow: auto;*/
+    background-color: ;
+}
+*/
+/*
+div#column {
+	padding: 5px;
+	margin: 0px 0px 15px 10px;
+	text-align: center;
+	-moz-border-radius: 3px 3px 3px 3px / 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px / 3px 3px 3px 3px;    
+}
+*/
+
+div.infoColumn {
+    position: absolute;
+	padding: 5px;
+	/*margin: 0px 0px 10px 0px;*/
+	background-image: url("../images/infoBackground.png"); /***Change****/
+	width: 212px;
+	min-height: 100px;
+	text-align: center;
+	border: grooved black 1px;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+/*About Container*/
+div#aboutContainer {
+	position: relative;
+	padding: 0px 20px 10px 20px;
+	margin: 10px 10px 0px 10px;
+	width: 968px;
+	min-height: 100px;
+	text-align: center;
+	-moz-border-radius: 3px 3px 3px 3px / 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px / 3px 3px 3px 3px;
+    overflow: auto;
+    background-image: url("../images/infoBackground.png"); /***Change***/
+}
+
+div#aboutContainer p {
+	text-align: left;
+}

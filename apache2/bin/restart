@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/home/hackbyrd/webapps/redditpix/apache2/bin/stop
+sleep 5
+/home/hackbyrd/webapps/redditpix/apache2/bin/start
